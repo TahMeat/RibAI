@@ -4,4 +4,4 @@
 npm run build
 
 # copy build to site repo.
-cp -r build/* ../tahmeat.github.io/ribai
+cp -r -Force build/* ../tahmeat.github.io/ribai
