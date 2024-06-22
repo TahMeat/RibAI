@@ -11,6 +11,10 @@ function App() {
     setMessage(e.target.value)
   }
 
+  const sendMessage = async() => {
+
+  }
+
   return (
     <div className="App">
       <header className="App-header">

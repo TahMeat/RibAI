@@ -37,6 +37,7 @@ const Input: FC<InputProps> = ({
         onChange={onChange}
         disabled={disabled}
       />
+      <button className="send" type="submit">></button>
       {error && <p className="error">Ran out of tokens, sorry.</p>}
     </div>
   )

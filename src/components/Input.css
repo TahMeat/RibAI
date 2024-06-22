@@ -2,9 +2,18 @@
   .label {
     font-weight: 600;
     font-size: 18px;
-    color: #0153e0;
+    color: #ffffff;
     display: block;
     margin-bottom: 8px;
+  }
+
+  /* Send Button */
+  .send {
+    border-radius: 100%;
+    border: 0.5vmin solid #ffffff;
+    background: #ffffff21;
+    margin-left: 1%;
+    color: #ffffff;
   }
   
   /* Input field */
@@ -12,26 +21,21 @@
     font-size: 16px;
     font-weight: 400;
     width: 85%;
-    color: #344054;
-    background: #ffffff;
-    border: 1px solid #d0d5dd;
-    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
-    border-radius: 8px;
+    color: #ffffff;
+    background: #ffffff21;
+    border: 0.5vmin solid #ffffff;
+    border-radius: 1vmin;
     padding: 10px 14px;
   }
   
   input::placeholder {
     font-size: 16px;
     font-weight: 400;
-    color: #667085;
-  }
-  
-  /* Input field focus */
-  input:focus {
+    color: #ffffff;
   }
   
   .error {
-    color: #db4437;
+    color: #e68278;
     font-size: 14px;
     font-weight: 400;
     margin-left: 12px;
