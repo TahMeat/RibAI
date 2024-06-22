@@ -1,0 +1,11 @@
+.Message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Text {
+    color: rgb(0, 0, 0);
+    width: 85%;
+}
