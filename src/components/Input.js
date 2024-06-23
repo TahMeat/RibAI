@@ -1,46 +1,42 @@
-import { ChangeEvent, FC } from 'react'
+import React, { useState } from 'react';
 import './Input.css';
 
-interface InputProps {
-  type: 'text';
-  autoComplete: string;
-  label: string;
-  value: string | number;
-  name: string;
-  placeholder: string;
-  error: boolean;
-  disabled?: boolean;
-  onChange: (e: ChangeEvent<HTMLInputElement>) => void
-}
+const Input = ({ onSendMessage }) => {
+  const [inputValue, setInputValue] = useState('');
+  const [placeholderMessage, setPM] = useState('Enter your message');
+  const [debounce, setDebounce] = useState(false);
+  const [error, setError] = useState(false);
+  const [eMessage, setEMessage] = useState('Waiting for bot\'s response...');
 
-const Input: FC<InputProps> = ({
-  type,
-  label,
-  autoComplete,
-  value,
-  name,
-  placeholder,
-  error,
-  disabled,
-  onChange,
-}) => {
+  const handleSendMessage = (e) => {
+    e.preventDefault();
+    if (!debounce && inputValue.trim() !== ''){
+      onSendMessage(inputValue, setDebounce, setError, setEMessage, setPM);
+      setInputValue('');
+      setError(false);
+    }else{
+      console.log("hi")
+      setError(true);
+    }
+
+  };
+
   return (
     <div className="input-wrapper">
-      <label htmlFor={label}>{label}</label>
+      <form className="messageParent" onSubmit={handleSendMessage}>
       <input
-        autoComplete={autoComplete}
-        type={type}
-        id={label}
-        value={value}
-        name={name}
-        placeholder={placeholder}
-        onChange={onChange}
-        disabled={disabled}
+        type="text"
+        autoComplete="off"
+        value={inputValue}
+        onChange={(e) => setInputValue(e.target.value)}
+        placeholder={placeholderMessage}
+        className={inputValue !== '' ? '' : 'grow'}
       />
-      <button className="send" type="submit">></button>
-      {error && <p className="error">Ran out of tokens, sorry.</p>}
+      <button className={`send ${inputValue !== '' ? 'show' : ''}`} type="submit">➤</button>
+      </form>
+      <p className={`error ${error ? 'show' : ''}`}>{eMessage}</p>
     </div>
-  )
-}
+  );
+};
 
-export default Input
+export default Input;
