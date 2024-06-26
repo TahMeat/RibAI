@@ -10,4 +10,4 @@ React application on my website relies on AWS Lambda to obtain the user's input 
 
 ## Acknowledgements
 
- - [Microsoft DialoGPT on HuggingFace](https://huggingface.co/microsoft/DialoGPT-medium)
+ - [Meta Llama 3 on HuggingFace](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct)
