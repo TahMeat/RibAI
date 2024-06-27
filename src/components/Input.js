@@ -15,7 +15,6 @@ const Input = ({ onSendMessage }) => {
       setInputValue('');
       setError(false);
     }else{
-      console.log("hi")
       setError(true);
     }
 
