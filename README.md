@@ -1,7 +1,7 @@
 # RibAI
 Python Chatbot, working on it casually.
 
-React application on my website relies on AWS Lambda to obtain the user's input and relay the model's response to the application.
+React application on my website relies on AWS Gateway API and AWS Lambda to obtain the user's input and relay the model's response to the application.
 
 ## Badges
 
