@@ -1,5 +1,5 @@
 # RibAI
-Python Chatbot, working on it casually.
+Python Chatbot, working on it casually. It's pronounced Ribeye.
 
 React application on my website relies on AWS Gateway API and AWS Lambda to obtain the user's input and relay the model's response to the application.
 
